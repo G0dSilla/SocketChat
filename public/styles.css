@@ -1,0 +1,201 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    /* background-color: #f7f7f7; */
+    background: linear-gradient(90deg, rgba(21,6,129,1) 0%, rgba(0,48,226,1) 26%, rgba(34,114,218,1) 68%, rgba(60,142,205,1) 100%);
+}
+
+/* Estilos mantenedor */
+.contenedor-principal{
+    margin: 60px auto;
+    border: none;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    min-width: 300px;
+    max-width: 900px;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.6);
+}
+
+.titulo{
+    font-family: Georgia, 'Times New Roman', Times, serif, Times, serif;
+    text-align: center;
+    color: #0ea7d5;
+    flex: 5%;
+}
+
+
+/* Estilos login */
+.login{
+    flex: 95%;
+
+}
+
+#ingresar{
+    border: none;
+    border-radius: 15px;
+    margin: 30px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#ingresar input{
+    height: 35px;
+    width: 70%;
+    outline: none;
+    border: none;
+    padding: 8px 10px;
+    margin-right: 30px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: #dfdfdf;
+    
+}
+
+#ingresar button{
+    width: 25%;
+    border-radius: 15px;
+    border: none;
+    background-color: transparent;
+    border: 2px solid  rgb(23, 171, 163);
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#ingresar button:hover{
+    background-color: rgb(23, 171, 163);
+    transition: 0.3s;
+}
+
+/* Estilo error login */
+.error-ingreso{
+    display: none;
+    background-color: #b50000;
+    border: none;
+    border-radius: 15px;
+    margin: 30px auto;
+    width: 70%;
+    /* height: 0px; */
+    padding: 15px;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+/* Estilos chat */
+.chat{
+    flex: 95%;
+    display: none;
+    flex-direction: column;
+}
+
+#contenedorMensajes{
+    border-top: solid 1px white;
+    overflow-y: scroll;
+    flex: 85%;
+    max-height: 455px;
+}
+
+.mensaje{
+    border: solid 1px white;
+    width: 95%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    border: solid 1px white;
+    flex: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-inicial{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d2358;
+    font-size: 40px;
+    border-radius: 50%;
+    font-family: sans-serif;
+    background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(70,252,249,1) 56%, rgba(17,88,223,1) 100%);
+    font-weight: bold;
+}
+
+.mensaje-burbuja{
+    flex: 90%;
+    margin: 10px;
+    border: none;
+    background: rgb(238, 238, 238);
+    height: auto;
+    border-radius: 8px;
+    width: 87%;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.mensaje-usuario{
+    margin: 8px 0px 0px 10px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.mensaje-texto{
+    margin: 5px 0px 8px 10px;
+    border: none;
+    background: rgb(238, 238, 238);
+    height: auto;
+    border-radius: 8px;
+    width: 87%;
+    font-family: sans-serif;
+    font-size: 14px;
+    overflow-wrap: break-word;
+}
+
+#enviarMensaje{
+    flex: 12%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border-top: solid 3px whitesmoke;
+}
+
+#enviarMensaje textarea{
+    width: 80%;
+    resize: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+}
+
+#enviarMensaje button{
+    width: 20%;
+    background-color: #01071eb0;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-left: solid 1px white;
+    cursor: pointer;
+}
