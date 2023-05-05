@@ -1,4 +1,5 @@
 
+
 const socket = io.connect('http://localhost:8022', {'forceNew': true});
 
 socket.on('mensajes', (data) => {
@@ -6,6 +7,13 @@ socket.on('mensajes', (data) => {
     render(data);
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('ingresar').addEventListener('keypress', e => {
+        if(e.which == 13) {
+            e.preventDefault();
+        }
+    })
+});
 
 const render = (data) => {
     console.log(data)
@@ -29,35 +37,22 @@ const render = (data) => {
 }
 
 const enviarMensaje = (event) => {
+    mistorage = window.localStorage
     let texto = document.getElementById('textoMensaje');
+    if(texto.value.length === 0){
+        return false;
+    }
 
     let mensaje = {
         texto: document.getElementById('textoMensaje').value,
-        nomUsuario: iniciarSesion()
+        nomUsuario: mistorage.getItem('nombreUsuario')
     }
     socket.emit('enviarMensaje', mensaje);
-
-    texto.value = '';
+    texto.value = "";
     return false;
 }
 
-const iniciarSesion = () => {
-    let nombreUsuario = document.getElementById('nombreUsuario').value;
-
-    if(!nombreUsuario || nombreUsuario.lenght === 0){
-        document.getElementById('errorIngreso').style.display = "block";
-        return false;
-    }
-    document.getElementById('login').style.display = 'none';
-    document.getElementById('chat').style.display = 'flex';
-    return nombreUsuario;
-}
 
 
-// if(btnIngresar){
-//     btnIngresar.addEventListener('click', () => {
-//         iniciarSesion()
-//     })
-// }
 
 

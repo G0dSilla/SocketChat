@@ -22,18 +22,53 @@ body{
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.6);
 }
 
-.titulo{
-    font-family: Georgia, 'Times New Roman', Times, serif, Times, serif;
-    text-align: center;
-    color: #0ea7d5;
+
+.navbar{
     flex: 5%;
+    display: flex;
+    flex-direction: row;
 }
 
+
+.titulo{
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #0ea7d5;
+    flex: 90%;
+    margin: 20px 0px;
+}
+
+.botonesNav{
+    flex: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnSalir{
+    background-color: transparent;
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    border: solid 3px rgb(184, 19, 19);
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+    /* display: none; */
+}
+
+#btnSalir:hover{
+    background-color: rgb(184, 19, 19);
+    transition: 0.3s;
+}
 
 /* Estilos login */
 .login{
     flex: 95%;
-
 }
 
 #ingresar{
@@ -108,7 +143,7 @@ body{
 }
 
 .mensaje{
-    border: solid 1px white;
+    border: none;
     width: 95%;
     margin: 10px auto;
     display: flex;
@@ -116,7 +151,7 @@ body{
 }
 
 .logo{
-    border: solid 1px white;
+    border: none;
     flex: 10%;
     display: flex;
     justify-content: center;
@@ -137,6 +172,7 @@ body{
     font-family: sans-serif;
     background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(70,252,249,1) 56%, rgba(17,88,223,1) 100%);
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .mensaje-burbuja{
@@ -160,12 +196,12 @@ body{
 }
 
 .mensaje-texto{
-    margin: 5px 0px 8px 10px;
+    margin: 5px 0px 10px 10px;
     border: none;
     background: rgb(238, 238, 238);
     height: auto;
     border-radius: 8px;
-    width: 87%;
+    width: 95%;
     font-family: sans-serif;
     font-size: 14px;
     overflow-wrap: break-word;

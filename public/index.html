@@ -10,9 +10,14 @@
 </head>
 <body>
     <section class="contenedor-principal">
-        <h1 class="titulo">Bienvenido a SocketChat</h1>
+        <nav class="navbar">
+            <h1 class="titulo">Bienvenido a SocketChat</h1>
+            <div class="botonesNav">
+                <button id="btnSalir" onclick="return salir()">Salir</button>
+            </div>
+        </nav>
         <div class="login" id="login">
-            <form id="ingresar" >
+            <form id="ingresar">
                 <input type="text" placeholder="Ingresa tu nombre de usuario..." id="nombreUsuario" autocomplete="off">
                 <button id="btnIngresar" type="button" onclick="return iniciarSesion()">Ingresar</button>
             </form>
@@ -32,6 +37,7 @@
         
     </section>
 </body>
-<script src="main.js"></script>
 
+<script src="login.js"></script>
+<script src="main.js"></script>
 </html>
