@@ -1,7 +1,8 @@
 
-body{
+html, body{
     padding: 0;
     margin: 0;
+    /* height: 100%; */
     /* background-color: #f7f7f7; */
     background: linear-gradient(90deg, rgba(21,6,129,1) 0%, rgba(0,48,226,1) 26%, rgba(34,114,218,1) 68%, rgba(60,142,205,1) 100%);
 }
@@ -35,12 +36,12 @@ body{
     font-family: sans-serif;
     text-align: center;
     color: #0ea7d5;
-    flex: 90%;
+    flex: 88%;
     margin: 20px 0px;
 }
 
 .botonesNav{
-    flex: 10%;
+    flex: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +49,7 @@ body{
 
 #btnSalir{
     background-color: transparent;
-    width: 80%;
+    width: 90%;
     height: 40px;
     cursor: pointer;
     outline: none;
@@ -59,6 +60,10 @@ body{
     border-radius: 10px;
     transition: 0.3s;
     /* display: none; */
+}
+
+.btnTexto{
+    font-size: 18px;
 }
 
 #btnSalir:hover{
@@ -234,4 +239,199 @@ body{
     font-size: 18px;
     border-left: solid 1px white;
     cursor: pointer;
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos específicos para tablets */
+    html, body{
+        height: 100%;
+    }
+
+    .contenedor-principal{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    #ingresar{
+        margin: 30px auto;
+        width: 75%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #ingresar input{
+        height: 40px;
+        width: 90%;
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    
+
+    #ingresar button{
+        width: 92%;
+        border-radius: 15px;
+        font-size: 18px;
+        height: 55px;
+    }
+    
+    #ingresar button:hover{
+        background-color: rgb(23, 171, 163);
+        transition: 0.3s;
+    }
+
+    .error-ingreso{
+        margin: 0px auto;
+        width: 65%;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    #contenedorMensajes{
+        max-height: 1030px;
+    }
+
+    #btnSalir{
+        width: 90%;
+        font-size: 20px;
+    }
+    
+    .logo-inicial{
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+    }
+    
+    .mensaje-burbuja{
+        font-size: 18px;
+    }
+    
+    .mensaje-usuario{
+        font-size: 19px;
+    }
+    
+    .mensaje-texto{
+        font-size: 18px;
+    }
+    
+    #enviarMensaje textarea{
+        font-size: 18px;
+    }
+    
+    #enviarMensaje button{
+        font-size: 18px;
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 767px) {
+    /* Estilos específicos para móviles */
+
+    html, body{
+        height: 100%;
+    }
+
+    .contenedor-principal{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .titulo{
+        font-size: 22px;
+    }
+
+    .btnTexto{
+        font-size: 18px;
+        display: none;
+    }
+
+    #ingresar{
+        margin: 20px auto;
+        margin-bottom: 15px;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #ingresar input{
+        height: 35px;
+        width: 92%;
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+    
+
+    #ingresar button{
+        width: 98%;
+        border-radius: 15px;
+        font-size: 15px;
+        height: 45px;
+        border-radius: 8px;
+
+    }
+    
+    #ingresar button:hover{
+        background-color: rgb(23, 171, 163);
+        transition: 0.3s;
+    }
+
+    .error-ingreso{
+        margin: 0px auto;
+        width: 82%;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    #contenedorMensajes{
+        max-height: 700px;
+    }
+
+    #btnSalir{
+        width: 90%;
+        font-size: 20px;
+    }
+    
+    .logo{
+        align-items: normal;
+        margin-top: 10px;
+    }
+
+    .logo-inicial{
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+    }
+    
+    .mensaje-burbuja{
+        font-size: 15px;
+        width: 80%;
+    }
+    
+    .mensaje-usuario{
+        font-size: 15px;
+    }
+    
+    .mensaje-texto{
+        font-size: 14px;
+    }
+    
+    #enviarMensaje textarea{
+        font-size: 16px;
+    }
+    
+    #enviarMensaje button{
+        font-size: 16px;
+    }
+
+    .textoBtnEnviar{
+        display: none;
+    }
 }

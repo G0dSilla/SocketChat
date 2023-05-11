@@ -7,13 +7,16 @@
     <title>SocketChat</title>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="librerias/fontawesome-free-6.4.0-web/css/all.min.css" type="text/css">
 </head>
 <body>
     <section class="contenedor-principal">
         <nav class="navbar">
             <h1 class="titulo">Bienvenido a SocketChat</h1>
             <div class="botonesNav">
-                <button id="btnSalir" onclick="return salir()">Salir</button>
+                <button id="btnSalir" onclick="return salir()">
+                    <span class="btnTexto">Salir</span> <i class="fa-solid fa-delete-left"></i> 
+                </button>
             </div>
         </nav>
         <div class="login" id="login">
@@ -21,9 +24,9 @@
                 <input type="text" placeholder="Ingresa tu nombre de usuario..." id="nombreUsuario" autocomplete="off">
                 <button id="btnIngresar" type="button" onclick="return iniciarSesion()">Ingresar</button>
             </form>
-            <div class="error-ingreso" id="errorIngreso">
+            <span class="error-ingreso" id="errorIngreso">
                 Ingrese su nombre de usuario para continuar...
-            </div>
+            </span>
         </div>
         <div class="chat" id="chat">
             <div id="contenedorMensajes">
@@ -31,7 +34,7 @@
             </div>
             <form id="enviarMensaje" onsubmit="return enviarMensaje(this)">
                 <textarea id="textoMensaje" type="text" placeholder="Escribe tu mensaje..."></textarea>
-                <button id="btnEnviar" type="submit">Enviar</button>
+                <button id="btnEnviar" type="submit"><span class="textoBtnEnviar">Enviar</span> <i class="fa-solid fa-share"></i></button>
             </form>
         </div>
         
@@ -40,4 +43,5 @@
 
 <script src="login.js"></script>
 <script src="main.js"></script>
+<script src="librerias/fontawesome-free-6.4.0-web/js/all.min.js"></script>
 </html>
